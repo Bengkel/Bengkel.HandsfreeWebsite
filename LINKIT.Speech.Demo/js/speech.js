@@ -1,4 +1,5 @@
-﻿var subscriptionKey = "8b98c93a48b94486ad8df2af195f3071";
+﻿// speech api variables
+var subscriptionKey = "8b98c93a48b94486ad8df2af195f3071";
 var serviceRegion = "westeurope";
 var speechRecognitionLanguage = "en-US";
 
@@ -45,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
                 phraseDiv.innerHTML += result.text;
-                window.console.log(result);
+                console.log(result);
 
                 recognizer.close();
                 recognizer = undefined;
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 startRecognizeOnceAsyncButton.classList.remove("record");
 
                 phraseDiv.innerHTML += err;
-                window.console.log(err);
+                console.log(err);
             });
     });
 
