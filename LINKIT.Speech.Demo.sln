@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LINKIT.Speech.Demo", "LINKIT.Speech.Demo\", "{B393F348-D4AA-4052-A03D-57C60BA7E3E9}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57588"
+		Debug.AspNetCompiler.PhysicalPath = "LINKIT.Speech.Demo\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57588\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57588"
+		Release.AspNetCompiler.PhysicalPath = "LINKIT.Speech.Demo\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57588\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57588"
+		SlnRelativePath = "LINKIT.Speech.Demo\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B393F348-D4AA-4052-A03D-57C60BA7E3E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B393F348-D4AA-4052-A03D-57C60BA7E3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C81C5967-08FD-49A4-85EC-5D6F8EEA3922}
+	EndGlobalSection
+EndGlobal

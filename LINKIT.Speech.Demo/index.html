@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Azure Speech Services</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <!--<link href="Content/font-awesome.css" rel="stylesheet">-->
+    <!-- Custom styles for this template -->
+    <link href="Content/linkit.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <div class="navbar-header d-lg-none"><img src="img/icon-linkit-logo.svg" /></div>
+        <div id="warning">
+            <h1 class="lead text-white m-0">Speech Recognition SDK not found.</h1>
+        </div>
+        <div id="key">
+            <h1 class="lead text-white m-0">API Key not found.</h1>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand js-scroll-trigger" href="#">
+            <span class="d-none d-lg-block">
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2 ready" src="img/mic.svg" width="160" id="startRecognizeOnceAsyncButton" alt="">
+            </span>
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="navbar-brand" href="#"></a>
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#speechservices">Speech Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#why">Why?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#azure">Azure</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#sdk">SDK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#code">Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#commands">commands</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger text-hide" href="#thankyou">thank you</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-footer d-none d-lg-block d-xl-block"><img src="img/icon-linkit-logo.svg" /></div>
+
+    </nav>
+
+    <div class="container-fluid p-0">
+        <section class="linkit-section p-3 p-lg-5 d-flex d-column" id="speechservices">
+            <div class="my-margin">
+                <h2 class="mb-0">
+                    Azure
+                    <span class="text-primary">Speech services</span>
+                </h2>
+                <div class="subheading mb-3">
+                    Swiftly convert audio to text for natural responsiveness.
+                </div>
+
+                <p class="lead mb-1">
+                    <textarea id="phraseDiv" style="display: inline-block;width:500px;height:200px" class="text-result">- Just hit the mic and speak! -</textarea>
+                </p>
+
+                <div id="carouselCommands" class="carousel slide linkit-carousel mb-5" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">'Hey LINKIT, change to grey' -or 'Hey LINKIT, change to black'</div>
+                        <div class="carousel-item">'Hey LINKIT, change to square' - or 'Hey LINKIT, change to circle'</div>
+                        <div class="carousel-item">'Hey LINKIT, go to AZURE' -or- any other page from the menu</div>
+                    </div>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselCommands" data-bs-slide-to="0" class="linkit-carousel-button active" aria-current="true" aria-label="Colours"></button>
+                        <button type="button" data-bs-target="#carouselCommands" data-bs-slide-to="1" class="linkit-carousel-button" aria-label="Shapes"></button>
+                        <button type="button" data-bs-target="#carouselCommands" data-bs-slide-to="2" class="linkit-carousel-button" aria-label="Navigation"></button>
+                    </div>
+                </div>
+
+                <div class="linkit-item d-flex flex-column flex-md-row mb-5">
+                    <div class="linkit-content">
+                        <ul class="mb-5 mr-auto">
+                            <li>Speech to Text – <i>Converts spoken audio to text for intuitive interaction</i></li>
+                            <li>Text to Speech – <i>Give natural voice to your apps</i></li>
+                            <li>Speech Translation</li>
+                            <li>Speaker Recognition - <i>Use speech to identify and verify individual speakers</i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0"  id="why">
+        <section class="linkit-section p-3 p-lg-5 d-flex flex-column">
+            <div class="my-margin">
+                <h2 class="mb-0">Why?</h2>
+                <div class="subheading mb-5">We are entering the voice-enabled digital assistant era.</div>
+
+                <div class="linkit-item d-flex flex-column flex-md-row mb-5">
+                    <div class="linkit-content mr-auto">
+                        <h3 class="mb-0">Home assistants</h3>
+                        <div class="subheading mb-5">Powerful voice Assistants, powered by Cloud technology, that gets thing done handsfree.</div>
+                        <p><img src="img/animated.png" /></p>
+                    </div>
+                </div>
+
+                <div class="linkit-item d-flex flex-column flex-md-row mb-5">
+                    <div class="linkit-content mr-auto">
+                        <ul>
+                            <li>Ask questions</li>
+                            <li>Personalized help with your schedule</li>
+                            <li>Control smart devices</li>
+                            <li>Make and receive hands-free calls</li>
+                            <li><i>And what more?</i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" id="azure">
+        <section class="linkit-section p-3 p-lg-5 d-flex flex-column">
+            <div class="my-margin">
+                <h2 class="mb-0">Azure</h2>
+                <div class="subheading mb-5">To get started using the Azure Custom Speech Service, you first need to link your user account to an Azure subscription.</div>
+
+                <div class="linkit-item d-flex flex-column flex-md-row mb-5">
+                    <div class="linkit-content mr-auto">
+                        <h3 class="mb-0">Speech Services</h3>
+                        <div class="subheading mb-3">Next select the Speech Services from the Azure Store.</div>
+                        <p><img src="img/speech.png" width="100%" /></p>
+                    </div>
+                </div>
+
+                <div class="linkit-item d-flex flex-column flex-md-row mb-5">
+                    <div class="linkit-content mr-auto">
+                        <h3 class="mb-0">Authentication</h3>
+                        <div class="subheading mb-3">Get your authentication key for the Speech API.</div>
+                        <p><img src="img/speech-keys.png" width="100%" /></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" id="sdk">
+        <section class="linkit-section p-3 p-lg-5 d-flex flex-column">
+            <div class="my-margin">
+                <h2 class="mb-0">SDK</h2>
+                <div class="subheading mb-5">SDK provides access to Speech to Text, Speech Translation, and Intent Recognition.</div>
+
+                <div class="linkit-item d-flex flex-column flex-md-row mb-5">
+                    <div class="linkit-content mr-auto">
+                        <h3 class="mb-0">Microsoft Cognitive Services Speech SDK</h3>
+                        <div class="subheading mb-3">The native and managed libraries for the Microsoft Cognitive Services Speech SDK.</div>
+
+                        <p>Install via NuGet <a href="https://www.nuget.org/packages/Microsoft.CognitiveServices.Speech" target="demo">https://www.nuget.org/packages/Microsoft.CognitiveServices.Speech</a></p>
+                        <p>Or download from documentation at <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/Speech-Service/" target="demo">https://docs.microsoft.com/en-us/azure/cognitive-services/Speech-Service/</a>.</p>
+                    </div>
+                </div>
+
+                <div class="linkit-item d-flex flex-column flex-md-row mb-5">
+                    <div class="linkit-content mr-auto">
+                        <h3 class="mb-0">Support</h3>
+                        <div class="subheading mb-3">Supported programming languages &amp; platforms.</div>
+                        <p>
+                            Languages: C#, .NET Standard, C/C++, Java, Objective C, JavaScript<br />
+                            Platforms: Windows 10, Linux, Android, iOS, macOS, ARM64 Devices, Browser, REST
+                        </p>
+                    </div>
+                </div>
+
+                <div class="linkit-item d-flex flex-column flex-md-row mb-5">
+                    <div class="linkit-content mr-auto">
+                        <h3 class="mb-0">Example</h3>
+                        <div class="subheading mb-3">Browser Implementation</div>
+
+                        <p>
+                            <samp>
+                                &lt;!-- Speech SDK reference sdk. --&gt;<br />
+                                <mark>&lt;script src="js/microsoft.cognitiveservices.speech.sdk.bundle.js"&gt;&lt;/script&gt;</mark><br />
+                                &lt;!-- Custom scripts for this template --&gt;<br />
+                                <mark>&lt;script src="js/speech.js"&gt;&lt;/script&gt;</mark>
+                            </samp>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" id="code">
+        <section class="linkit-section p-3 p-lg-5 d-flex flex-column">
+            <div class="my-margin">
+                <h2 class="mb-0">Code</h2>
+                <div class="subheading mb-5">A browser example</div>
+
+                <pre class="text-code">
+                <code>
+<mark>var subscriptionKey = "{your-private-key}";
+var serviceRegion = "{your-azure-region}";
+var speechRecognitionLanguage = "{your-preferred-language}";</mark>
+
+let commandReg = /^hey link it|hey link, it/i;
+var authorizationToken;
+var SpeechSDK;
+
+document.addEventListener("DOMContentLoaded", function () {
+    startRecognizeOnceAsyncButton = document.getElementById("startRecognizeOnceAsyncButton");
+    startRecognizeOnceAsyncButton.addEventListener("click", function () {
+
+    var speechConfig;
+    if (<mark>authorizationToken</mark>) { 
+        speechConfig = SpeechSDK.SpeechConfig.fromAuthorizationToken(authorizationToken, serviceRegion); 
+    } else {
+        if (subscriptionKey === "") { return; }
+        speechConfig = SpeechSDK.SpeechConfig.fromSubscription(subscriptionKey, serviceRegion);
+    }
+
+    <mark>speechConfig.speechRecognitionLanguage = speechRecognitionLanguage;</mark>
+
+    <mark>var audioConfig = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput();</mark>
+
+    var recognizer = new SpeechSDK.SpeechRecognizer(speechConfig, audioConfig);
+    <mark>recognizer.recognizeOnceAsync</mark>(
+        function (<mark>result</mark>) {
+            recognizer.close();
+            recognizer = undefined;
+
+            startRecognizeOnceAsyncButton.disabled = false;
+
+            <mark>if (commandReg.test(result.text)) {
+                voiceCommand(result.text);
+            }</mark>
+
+            ...
+        },
+        function (<mark>err</mark>) {
+            ...
+        }
+        ...
+    });
+
+    if (!!window.SpeechSDK) {
+        SpeechSDK = window.SpeechSDK;
+        startRecognizeOnceAsyncButton.disabled = false;
+        ...
+
+        <mark>if (typeof RequestAuthorizationToken === "function") {
+            RequestAuthorizationToken();
+        }</mark>
+    }
+});
+                    </code>
+                </pre>
+            </div>
+        </section>
+        <hr class="m-0" id="commands">
+        <section class="linkit-section p-3 p-lg-5 d-flex flex-column">
+            <div class="my-margin">
+                <h2 class="mb-0">Commands</h2>
+                <div class="subheading mb-5">Recognize intents from speech.</div>
+
+                <pre class="text-code">
+                <code>
+<mark>let commandReg = /^hey linkit/i;</mark>
+...
+
+    function voiceCommand(<mark>command</mark>) {
+
+        <mark>command = command
+            .replace(commandReg, "")
+            .replace(",", "")
+            .toLowerCase();</mark>
+            ...
+
+        <mark>if (command.includes("change to") || command.includes("changeto")|| command.includes("changed to") || command.includes("changedto"))</mark> 
+        {
+
+            <mark>// Remove intention, isolate command
+            commandOption = command.replace("changed", "")
+                .replace("change", "")
+                .replace("to", "")
+                .replace(".", "")
+                .replace(/ /g, '');</mark>
+
+            switch (commandOption) {
+                <mark>case "gray":
+                    document.getElementById("sideNav").classList.remove('bg-primary');
+                    document.getElementById("sideNav").classList.add('gray');
+                    break;</mark>
+                case "green":
+                ...
+
+        }
+    }
+                        </code>
+                </pre>
+            </div>
+        </section>
+        <hr class="m-0" id="thankyou">
+        <section class="linkit-section p-3 p-lg-5 d-flex flex-column">
+            <div class="my-margin">
+                <h2 class="mb-0">Ready to supercharge your app?</h2>
+                <div class="subheading mb-5">Convert audio to text, perform speech translation and text-to-speech with the unified Speech services</div>
+
+                <h1 class="mb-0">
+                    Thank
+                    <span class="text-primary">You</span>
+                </h1>
+
+                <div class="subheading mb-5">
+                    Questions? Send us an email..
+                </div>
+
+                <p>
+                    Dick van Straaten<br />
+                    <a href="mailto:dick.van.straaten@linkit.nl">dick.van.straaten@linkit.nl</a>
+                </p>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="Scripts/jquery-3.6.0.js"></script>
+    <script src="Scripts/bootstrap.bundle.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="Scripts/jquery.easing.1.3.js"></script>
+    <!-- Speech SDK reference sdk. -->
+    <script src="js/microsoft.cognitiveservices.speech.sdk.bundle-min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/linkit.js"></script>
+    <script src="js/speech.js"></script>
+</body>
+
+</html>
