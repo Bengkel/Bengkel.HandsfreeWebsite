@@ -1,5 +1,4 @@
-﻿// speech api variables
-var subscriptionKey = "8b98c93a48b94486ad8df2af195f3071";
+﻿var subscriptionKey = "{your-speech-api-key}";
 var serviceRegion = "westeurope";
 var speechRecognitionLanguage = "en-US";
 
